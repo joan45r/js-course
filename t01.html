@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js基礎練習 01</title>
+  <script type="text/javascript" src="t01.js"></script>
+</head>
+
+<body>
+  <h3>1. 數字處理【里程計算】</h3>
+  <form action="">
+    <p>請輸入里程(公里)：
+      <input type="text" id="mile">
+      <input type='button' name='submit' value='計算' onclick='processMilo();' />
+    </p>
+    <p>車資：
+      <span id="cost"></span>
+      <span>元</span>
+    </p>
+  </form>
+
+  <h3>2. 身分證檢驗</h3>
+  <form action="" id="idForm">
+    <p>選擇性別：
+      <input type="radio" name="gender" value="M" id="Male">男
+      <input type="radio" name="gender" value="F" id="Female">女
+    </p>
+    <p>身分證字號：
+      <input type="text" id="idNum">
+      <input type='button' name='submit' value='驗證' onclick='verifyId();' />
+    </p>
+    <p>驗證結果：
+      <span id="idResult"></span>
+    </p>
+  </form>
+
+  <h3>3. 印星星</h3>
+  <input type='button' name='submit' value='印出' onclick='printStar();' />
+  <p id='star1'></p>
+  <p id='star2'></p>
+  <p id='star3'></p>
+  <p id='star4'></p>
+  <p id='star5'></p>
+
+
+</body>
+
+</html>
