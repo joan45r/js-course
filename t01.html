@@ -7,6 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>js基礎練習 01</title>
   <script type="text/javascript" src="t01.js"></script>
+  <script type="text/javascript" src="t02.js"></script>
+  <style>
+    .mr-5 {
+      padding: 0 50px 0 0;
+    }
+
+    footer {
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -39,13 +49,79 @@
 
   <h3>3. 印星星</h3>
   <input type='button' name='submit' value='印出' onclick='printStar();' />
-  <p id='star1'></p>
-  <p id='star2'></p>
-  <p id='star3'></p>
-  <p id='star4'></p>
-  <p id='star5'></p>
+  <table>
+    <td class="mr-5">
+      <p id='star1'></p>
+    </td>
+    <td class="mr-5">
+      <p id='star2'></p>
+    </td>
+    <td class="mr-5">
+      <p id='star3'></p>
+    </td>
+    <td class="mr-5">
+      <p id='star4'></p>
+    </td>
+    <td class="mr-5">
+      <p id='star5'></p>
+    </td>
+  </table>
 
+  <h3>4. 滑鼠事件</h3>
+  <p>alert訊息：
+    <input type='button' name='submit' value='今天星期幾' onclick='week();' />
+  </p>
+  <p>
+    focus事件：
+    <input type="text" placeholder="focus me" id="myFocus" onfocusout="myFocusOut()">
+  </p>
+  <form>
+    <select name="myOption" id="myOption" onchange="optionValue();">
+      <option value="optionA">選項A</option>
+      <option value="optionB">選項B</option>
+      <option value="optionC">選項C</option>
+      <option value="optionD">選項D</option>
+    </select>
+  </form>
+  <hr>
+  <h3>1. 陣列排序</h3>
+  <p>輸入陣列(以空白鍵區隔)：
+    <input type='text' name='myArray' id="myArray" />
+    <input type="button" value="排列" onclick='sortArray();'>
+  </p>
+  <p>
+    您輸入的陣列：[ <span id="userArray"></span> ]
+  </p>
+  <p>(1) 最大元素=<span id="userMax"></span>；最小元素=<span id="userMin"></span></p>
+  <p>(2) 升冪：[ <span id="riseArray"></span> ]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    降冪：[ <span id="dropArray"></span> ]
+  </p>
+  <p>(3) 查詢指定陣列元素：
+    <input type='text' name='findArray' id="findArray" />
+    <input type="button" value="查詢" onclick='searchArray();'><br>&nbsp;&nbsp;&nbsp;&nbsp;
+    此元素位於：<span id="find"></span>
+  </p>
+  <p>(4) 陣列反轉：[ <span id="reverseArray"></span> ]</p>
+  <p>(5) 新增元素：<input type='text' name='addArray' id="addArray" />
+    <input type="button" value="新增" onclick='appendArray();'><br>&nbsp;&nbsp;&nbsp;&nbsp;
+    陣列更新：[ <span id="newArray"></span> ]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+    刪除元素(最後一位)<input type="button" value="刪除" onclick='popArray();'><br>&nbsp;&nbsp;&nbsp;&nbsp;
+    陣列更新：[ <span id="new2Array"></span> ]
+  </p>
+  <p>(6) 移除某個元素：
+    <input type='text' name='delArray' id="delArray" />
+    <input type="button" value="移除" onclick='deleteArray();'><br>&nbsp;&nbsp;&nbsp;&nbsp;
+    移除元素： <span id="removeValue"></span><br>&nbsp;&nbsp;&nbsp;&nbsp;
+    陣列更新：[ <span id="new3Array"></span> ]
+  </p>
+  <h3>2. 摩斯電碼</h3>
+  <textarea name="morseCode" id="morseCode" cols="30" rows="5"></textarea>
+  <input type="button" value="翻譯" onclick='morse();'>
+  <p>翻譯內容：<br>
+    <span id="transText"></span>
+  </p>
 
+  <footer></footer>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+// 計算里程
 function processMilo() {
   const mileID = document.getElementById("mile");
   const mile = mileID.value;
@@ -11,7 +12,7 @@ function processMilo() {
   }
   document.getElementById("cost").innerHTML = price;
 }
-
+// 身分證檢驗
 function verifyId() {
   const idNumID = document.getElementById("idNum");
   const idNum = idNumID.value;
@@ -115,22 +116,25 @@ function verifyId() {
   }
   document.getElementById("idResult").innerHTML = result;
 }
-
+// 印出星星
 function printStar() {
+  //第一種
   var starBlock1 = "";
   for (var i = 0; i < 5; i++) {
     for (var j = 0; j < 5; j++) {
-      starBlock1 += '　*　';
+      starBlock1 += '*&emsp;';
     }
     starBlock1 += '<br>';
   }
+  // 第二種
   var starBlock2 = "";
   for (var a = 0; a < 5; a++) {
     for (var b = 0; b <= a; b++) {
-      starBlock2 += '　*　';
+      starBlock2 += '*&emsp;';
     }
     starBlock2 += '<br>';
   }
+  // 第三種
   var starBlock3 = "";
   var temp = 4;
   for (var i = 1; i < 6; i++) {
@@ -143,6 +147,7 @@ function printStar() {
     starBlock3 += '<br>';
     temp--;
   }
+  // 第四種
   var starBlock4 = "";
   let ss;
   for (ss = 1; ss < 6; ss++) {
@@ -156,12 +161,60 @@ function printStar() {
     }
     starBlock4 += '*&emsp;<br>';
   }
-
+  // 第五種
+  var starBlock5 = "";
+  let x;
+  for (x = 1; x < 6; x++) {
+    starBlock5 += "*";
+    if (x == 2) {
+      starBlock5 += "*"
+    } else if (x > 2 && x < 5) {
+      for (var b = 2; b < x; b++) {
+        starBlock5 += "&ensp;";
+      }
+      starBlock5 += "*"
+    } else {
+      for (var c = 1; c < x; c++) {
+        starBlock5 += "*";
+      }
+    }
+    starBlock5 += "<br>"
+  }
   document.getElementById("star1").innerHTML = starBlock1;
   document.getElementById("star2").innerHTML = starBlock2;
   document.getElementById("star3").innerHTML = starBlock3;
   document.getElementById("star4").innerHTML = starBlock4;
+  document.getElementById("star5").innerHTML = starBlock5;
 }
+// 今日星期
+function week() {
+  var today = new Date();
+  var day_list = ['日', '一', '二', '三', '四', '五', '六'];
+  alert("今天是" + today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日，星期" + day_list[today.getDay()])
+}
+function myFocusOut() {
+  alert("你不要我了");
+}
+function optionValue() {
+  var option = document.getElementById("myOption").value;
+  var text = ""
+  switch (option) {
+    case 'optionA':
+      text = "選項A"
+      break;
+    case 'optionB':
+      text = "選項B"
+      break;
+    case 'optionC':
+      text = "選項C"
+      break;
+    case 'optionD':
+      text = "選項D"
+      break;
+  }
+  alert(text + "在這");
+}
+
 
 window.onload = function () {
   console.log("test");
